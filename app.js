@@ -134,7 +134,6 @@ app.post("/delete", function(req, res){
 app.get("/about", function(req, res){
   res.render("about");
 });
-
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
-});
+var port = process.env.PORT || 8080;
+var server=app.listen(port,function() {
+console.log("app running on port 8080"); });
